@@ -1,18 +1,7 @@
-import {Routes} from '@angular/router';
-import {Home} from './home/home';
-import {Notfound} from './notfound/notfound';
+import { Routes } from '@angular/router';
+import { HomeComponent } from './home/home';
 
 export const routes: Routes = [
-  {
-    path: '',
-    component: Home
-  },
-  {
-    path: 'not-found',
-    component: Notfound
-  },
-  {
-    path: '**',
-    redirectTo: '/not-found'
-  }
+  { path: '', component: HomeComponent },
+  { path: '**', redirectTo: '' }
 ];

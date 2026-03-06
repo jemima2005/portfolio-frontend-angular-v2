@@ -1,11 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './portfolio.html',
-  styleUrl: './portfolio.scss',
+  styleUrls: ['./portfolio.scss']
 })
-export class Portfolio {
+export class PortfolioComponent implements OnInit {
 
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 }

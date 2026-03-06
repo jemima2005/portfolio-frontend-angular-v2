@@ -1,45 +1,90 @@
-<header class="navigation horizontal_header transparentOnScroll navbar navbar-expand-lg fixed-top">
-  <div class="header-ins">
+<header class="header">
+  <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <!--LOGO AREA-->
-      <div class="site-logo">
-        <a href="#" class="hoveroff" title="">
-          <!--<img src="" alt="">-->
-          Rect<span>CV</span>
+      <!-- Logo/Brand -->
+      <a class="navbar-brand" href="#home">
+        <span class="brand-text">Esther</span>
+        <span class="brand-accent">Djedje</span>
+      </a>
+
+      <!-- Mobile Toggle Button -->
+      <button 
+        class="navbar-toggler" 
+        type="button" 
+        (click)="toggleMenu()"
+        [class.active]="isMenuOpen"
+      >
+        <span class="toggler-icon"></span>
+        <span class="toggler-icon"></span>
+        <span class="toggler-icon"></span>
+      </button>
+
+      <!-- Navigation Menu -->
+      <div class="navbar-collapse" [class.show]="isMenuOpen">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" 
+               href="#home" 
+               [class.active]="isActive('home')"
+               (click)="closeMenu()">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" 
+               href="#about" 
+               [class.active]="isActive('about')"
+               (click)="closeMenu()">
+              About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" 
+               href="#services" 
+               [class.active]="isActive('services')"
+               (click)="closeMenu()">
+              Services
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" 
+               href="#portfolio" 
+               [class.active]="isActive('portfolio')"
+               (click)="closeMenu()">
+              Portfolio
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" 
+               href="#resume" 
+               [class.active]="isActive('resume')"
+               (click)="closeMenu()">
+              Resume
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" 
+               href="#blog" 
+               [class.active]="isActive('blog')"
+               (click)="closeMenu()">
+              Blog
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" 
+               href="#contact" 
+               [class.active]="isActive('contact')"
+               (click)="closeMenu()">
+              Contact
+            </a>
+          </li>
+        </ul>
+
+        <!-- Contact Button -->
+        <a href="#contact" class="btn btn-primary ms-3" (click)="closeMenu()">
+          <i class="fas fa-envelope"></i> Hire Me
         </a>
       </div>
-      <button class="button-toggler navbar-toggler collapsed" type="button" data-target="#navigation" data-toggle="collapse" aria-controls="navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <!--Main Navigation START-->
-      <ul class="justify-content-end scrollspy collapse navbar-collapse" id="navigation">
-        <li>
-          <a href="#home" class="nav-link">Home</a>
-        </li>
-        <li>
-          <a href="#about" class="nav-link">About</a>
-        </li>
-        <li>
-          <a href="#service" class="nav-link">Services</a>
-        </li>
-        <li>
-          <a href="#portfolio" class="nav-link">Portfolio</a>
-        </li>
-        <li>
-          <a href="#resume" class="nav-link">Resume</a>
-        </li>
-        <li>
-          <a href="#blog" class="nav-link">Blog</a>
-        </li>
-        <li>
-          <a href="#contact" class="nav-link">Contact</a>
-        </li>
-      </ul>
-      <!--Main Navigation END-->
-
     </div>
-  </div>
-
+  </nav>
 </header>

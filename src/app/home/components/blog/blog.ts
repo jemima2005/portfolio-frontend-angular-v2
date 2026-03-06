@@ -1,11 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-blog',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, FormsModule],
   templateUrl: './blog.html',
-  styleUrl: './blog.scss',
+  styleUrls: ['./blog.scss']
 })
-export class Blog {
+export class BlogComponent implements OnInit {
 
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  onNewsletterSubmit(event: Event): void {
+    event.preventDefault();
+    alert('Thank you for subscribing! 🎉');
+  }
 }

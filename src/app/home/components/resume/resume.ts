@@ -1,11 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-resume',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './resume.html',
-  styleUrl: './resume.scss',
+  styleUrls: ['./resume.scss']
 })
-export class Resume {
+export class ResumeComponent implements OnInit {
 
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 }
